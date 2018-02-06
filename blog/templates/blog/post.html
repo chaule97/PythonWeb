@@ -3,7 +3,7 @@
 {% block title %}{{post.title}}{% endblock  %}
 
 {% block content %}
-<h3><a href='/blog/{{post.id}}'>{{post.title}}</a></h3>
+<h3><a href='{% url 'post' post.id %}'>{{post.title}}</a></h3>
 <h6>on {{post.date}}</h6>
 {{post.body|safe|linebreaks}}
 {% endblock  %}
