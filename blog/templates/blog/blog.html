@@ -5,5 +5,6 @@
 {% block content %}
 {% for post in Posts %}
     <h4>{{post.date|date:"d-m-Y"}}<a href="/blog/{{post.id}}">{{post.title}}</a></h4>
+    <img src="{{post.image.url}}" width="500px" height="300px" />
 {% endfor %}
 {% endblock  %}
